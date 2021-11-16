@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionality</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Coloque o nome do País onde nasceu: <input type="text" name="pais" id="pais">
+    <input type="button" value="Testar" onclick="verificar()">
+    <p><strong>*Coloque a primeira letra do país em maiúsculo*</strong></p>
+    <div id="res"></div>
+    <script>
+        
+        function verificar(){
+            var busca = window.document.getElementById('pais')
+            var local = String(pais.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${local}<strong><p>`
+            if (local == 'Brasil'){
+               res.innerHTML += `<p>Você é <strong>Brasileiro<strong><p>`
+            }
+            else {
+               res.innerHTML += `<p>Você é <strong>Estrangeiro<strong><p>`
+            }
+            
+        }
+       
+    </script>
+</body>
+</html>
